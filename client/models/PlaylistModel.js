@@ -12,5 +12,10 @@ var Playlist = Backbone.Model.extend({
   		this.trigger('updatePlaylist', this);
   	});
 
+  },
+
+  makeCurrent: function(){
+    this.trigger('makeCurrent', this);
   }
+
 });
