@@ -3,16 +3,12 @@ var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td><td>(<%= count %> plays)</td>'),
-
-  events: {
-    'click': function() {
-      this.model.enqueue();
-    }
-  },
-
   render: function(){
-    return this.$el.html(this.template(this.model.attributes));
+    //
+
+    var node = this.$el.append( new LibraryTitleView({model: this.model}).render() );
+
+    return node.append( new SongAddToPlaylistView({model: this.model}).render() );
   }
 
 });

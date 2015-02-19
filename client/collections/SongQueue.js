@@ -14,7 +14,9 @@ var SongQueue = Songs.extend({
       var index = this.indexOf(song);
       if (index === 0){
         this.shift();
-        this.playFirst();
+        if (this.length > 0){
+          this.playFirst();
+        }
       } else {
         var removed = this.remove(song);
       }
