@@ -11,8 +11,14 @@ var SongQueue = Songs.extend({
     }, this);
 
     this.on("dequeue", function(song){
-      var removed = this.remove(song);
-      this.trigger("update", this);
+      var index = this.indexOf(song);
+      if (index === 0){
+        this.shift();
+        this.playFirst();
+      } else {
+        var removed = this.remove(song);
+      }
+        this.trigger("update", this);
     }, this);
 
     this.on("add", function(){

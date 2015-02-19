@@ -15,6 +15,10 @@ var AppView = Backbone.View.extend({
     this.model.on('enqueue', function(){
       this.songQueueView.render();
     }, this);
+
+    this.model.on('updateLib', function(){
+      this.libraryView.render();
+    }, this);
   },
 
   render: function(){
