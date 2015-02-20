@@ -1,7 +1,7 @@
 var PlaylistButtonView = Backbone.View.extend({
   tagName: 'form',
 
-  template: _.template('<input type="text" id="playlistField"><button type="button" onclick="false" id="newList">New Playlist</button>'),
+  template: _.template('<input type="text" id="playlistField"><button type="button" onclick="false" id="newList">Add</button>'),
 
   events: {
     "click button": function(){

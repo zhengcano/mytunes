@@ -5,6 +5,10 @@ var PlaylistCollectionView = Backbone.View.extend({
     this.render();
   },
 
+  attributes: {
+    'id':'playlists'
+  },
+
   render: function(){
     this.$el.children().detach();
 

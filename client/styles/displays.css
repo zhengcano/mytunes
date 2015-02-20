@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+/* SET DISPLAY TYPES AND ORIENTATION */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+ul, table {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#library {
+  flex: 6;
+}
+
+#queue {
+  flex: 3;
+}
+
+#playlists {
+  flex: 3;
+}
+
+#currentlist {
+  flex: 3;
+}
+
+
+/* SET MARGIN AND DIMENSIONS */
+form {
+  margin: 0 auto;
+}
+
+audio {
+  width: 100%;
+}
+
+ul, table {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-y: auto;
+}
+
+ul h3 {
+  margin: 0 auto;
+}
+
+.bottom{
+  margin-top: 10px;
+  width: 100%;
+}
+
+.thumb-box{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* SET BORDERS */
+
+ul, table {
+  border-left: 1px solid #c0c0c0;
+}

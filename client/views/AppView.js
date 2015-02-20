@@ -50,14 +50,20 @@ var AppView = Backbone.View.extend({
 
   },
 
+  attributes: {
+    'class': 'container'
+  },
+
   render: function(){
+    var collection = this.playlistView.$el.append(this.playlistButtonView.$el);
+    var bottomwrapper = $('<div class="bottom"></div>').append(this.libraryView.$el);
+    bottomwrapper.append(this.songQueueView.$el);
+    bottomwrapper.append(collection);
+    bottomwrapper.append(this.currentPlaylistView.$el);
     return this.$el.html([
+      $('<div class="spacer"></div>'),
       this.playerView.$el,
-      this.libraryView.$el,
-      this.songQueueView.$el,
-      this.playlistView.$el,
-      this.playlistButtonView.$el,
-      this.currentPlaylistView.$el
+      bottomwrapper
     ]);
   }
 

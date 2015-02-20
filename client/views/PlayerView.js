@@ -9,6 +9,10 @@ var PlayerView = Backbone.View.extend({
 
   },
 
+  attributes:{
+    'class': 'song-player'
+  },
+
   events: {
     'ended' : 'ended'
   },
