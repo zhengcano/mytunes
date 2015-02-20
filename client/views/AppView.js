@@ -18,13 +18,12 @@ var AppView = Backbone.View.extend({
     this.model.on('change:currentPlaylist', function(model){
       this.currentPlaylistView.remove();
       this.currentPlaylistView =  new PlaylistView({'$el':this.currentPlaylistView.$el, model: this.model.get('currentPlaylist')});
-      //this.currentPlaylistView.render();
       this.render();
       this.playerView.render();
       this.libraryView.render();
       this.songQueueView.render();
       this.playlistView.render();
-      //this.playlistButtonView.render();
+      this.playlistButtonView.render();
       this.currentPlaylistView.render();
     }, this);
 
@@ -33,7 +32,8 @@ var AppView = Backbone.View.extend({
     }, this);
 
     this.model.on('updateList', function(){
-      this.currentPlaylistView.render();
+      var collection = this.playlistView.$el.append(this.playlistButtonView.$el);
+      collection.render();
     }, this);
     // update queue once something is added
     this.model.on('enqueue', function(){

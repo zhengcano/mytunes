@@ -6,4 +6,14 @@ var Visualizer = Backbone.Model.extend({
     this.set('minDecibels', 140);
     this.set('maxDecibels', 0);
   }
+
+  this.loadSounds(obj, soundMap, callback){
+    var names = [];
+    var paths = [];
+    for (var name in soundMap) {
+      var path = soundMap[name];
+      names.push(name);
+      paths.push(path);
+    }
+  }
 });

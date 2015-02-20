@@ -73,3 +73,11 @@ ul h3 {
 ul, table {
   border-left: 1px solid #c0c0c0;
 }
+
+.upvoted {
+  border: 5px solid green;
+}
+
+.downvoted {
+  border: 5px solid red;
+}

@@ -5,9 +5,11 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click .up': function(){
+      this.$el.removeClass('downvoted');
       this.$el.addClass('upvoted');
     },
     'click .down': function(){
+      this.$el.removeclass('upvoted');
       this.$el.addClass('downvoted');
     }
   },
